@@ -1,1 +1,3 @@
-console.log("hi");
+function saveInput() {
+  console.log("buttton clicked");
+}
