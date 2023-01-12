@@ -13,12 +13,13 @@ function renderLeads() {
   let listItems = "";
 
   for (let i = 0; i < myLeads.length; i++) {
-    // listItems +=
-    //   "<li><a href=' " +
-    //   myLeads[i] +
-    //   " ' target='_blank'>" +
-    //   myLeads[i] +
-    //   " </a></li>";
+    listItems += `
+      <li>
+        <a target="_blank" href="${myLeads[i]}">
+        ${myLeads[i]}
+        </a>
+      </li>
+      `;
   }
   ulEl.innerHTML = listItems;
 }
@@ -26,11 +27,14 @@ function renderLeads() {
 // 5:35:02
 
 // scratch section ---------------
-const container = document.getElementById("container");
-container.innerHTML = "<button onclick='Buy()' > Buy! </buttton>";
+const recipient = "James";
+const sender = "Moses";
 
-function Buy() {
-  container.innerHTML += "<p> Thank you for buying! </p>";
-}
+const email = `hey ${recipient}!
 
+How is it going? 
+
+Cheers ${sender}
+`;
+console.log(email);
 // end scratch section ---------------
