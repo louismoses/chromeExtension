@@ -3,6 +3,10 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 
+// localStorage.setItem("mySponsors", "wwww.wikipedia.com");
+localStorage.getItem("mySponsors");
+// localStorage.clear();
+
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   inputEl.value = "";
@@ -24,17 +28,8 @@ function renderLeads() {
   ulEl.innerHTML = listItems;
 }
 
-// 5:35:02
+// 6:03:00
 
 // scratch section ---------------
-const recipient = "James";
-const sender = "Moses";
 
-const email = `hey ${recipient}!
-
-How is it going? 
-
-Cheers ${sender}
-`;
-console.log(email);
 // end scratch section ---------------
