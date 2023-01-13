@@ -22,6 +22,17 @@ body {
 #input-btn:hover {
   background-color: #b2db9b;
 }
+#tab-btn {
+  background-color: #5f9341;
+  color: white;
+  border: solid 1px #5f9341;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+#tab-btn:hover {
+  background-color: #b2db9b;
+}
 #delete-btn {
   border: 1px solid #5f9341;
   background: none;
