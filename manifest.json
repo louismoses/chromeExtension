@@ -4,5 +4,6 @@
     "name": "Sponsor Tracker",
     "action":{
         "default_popup":"index.html"
-    }
+    },
+    "permissions":["tabs"]
 }

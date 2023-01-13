@@ -5,11 +5,6 @@ const tabBtn = document.getElementById("tab-btn");
 const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("mySponsors"));
-const tabs = [
-  {
-    url: "https://www.linkedin.com/in/lm-rait/",
-  },
-];
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
@@ -39,7 +34,11 @@ inputBtn.addEventListener("click", function () {
 });
 
 tabBtn.addEventListener("click", function () {
-  console.log(tabs[0]);
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("mySponsors", JSON.stringify(myLeads));
+    render(myLeads);
+  });
 });
 
 deleteBtn.addEventListener("dblclick", function () {
@@ -48,7 +47,7 @@ deleteBtn.addEventListener("dblclick", function () {
   render(myLeads);
 });
 
-// 6:03:00
+// 7:09:43
 
 // scratch section ---------------
 
