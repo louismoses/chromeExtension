@@ -3,14 +3,19 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 
-// localStorage.setItem("mySponsors", "wwww.wikipedia.com");
-localStorage.getItem("mySponsors");
-// localStorage.clear();
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("mySponsors"));
+
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  renderLeads();
+}
 
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   inputEl.value = "";
+  localStorage.setItem("mySponsors", JSON.stringify(myLeads));
   renderLeads();
+  console.log(localStorage.getItem("myLeads"));
 });
 
 function renderLeads() {
@@ -31,5 +36,6 @@ function renderLeads() {
 // 6:03:00
 
 // scratch section ---------------
-
+let trueOfFalse = Boolean("");
+console.log(trueOfFalse);
 // end scratch section ---------------
