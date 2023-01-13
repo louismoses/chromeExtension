@@ -46,9 +46,3 @@ deleteBtn.addEventListener("dblclick", function () {
   myLeads = [];
   render(myLeads);
 });
-
-// 7:09:43
-
-// scratch section ---------------
-
-// end scratch section ---------------
